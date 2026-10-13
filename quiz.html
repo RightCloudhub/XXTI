@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XXTI | 测试</title>
+  <meta name="description" content="XXTI 24 题测试：得到你的类型、四轴偏好强度、互补搭档与对应图鉴。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="quiz">
+  <main>
+    <section class="page-hero section">
+      <div class="copy-stack">
+        <p class="eyebrow">Test</p>
+        <h1 class="page-title">24 题快速测试</h1>
+        <p class="lead">每题按同意程度打 1 到 5 分，大约 5 分钟。作答会自动保存在这台设备上，中途离开也不会丢。</p>
+      </div>
+      <div class="note-card">
+        <p class="panel-label">作答建议</p>
+        <ul class="quick-steps">
+          <li>按最近一段时间里最常见的自己作答。</li>
+          <li>别按「理想中的我」选。</li>
+          <li>拿不准就选 3，不必纠结。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="test-shell">
+        <div class="test-topbar">
+          <div>
+            <p class="panel-label">作答进度</p>
+            <strong id="progress-text">0 / 24</strong>
+          </div>
+          <div class="progress-track" id="progress-track" role="progressbar" aria-label="作答进度" aria-valuemin="0" aria-valuemax="24" aria-valuenow="0">
+            <span></span>
+          </div>
+        </div>
+
+        <form id="quiz-form" class="question-list"></form>
+
+        <p class="quiz-status" id="quiz-status" aria-live="polite"></p>
+        <div class="actions">
+          <button class="button button-solid" type="button" id="submit-quiz">提交并查看结果</button>
+          <button class="button button-ghost" type="button" id="reset-quiz">重新作答</button>
+        </div>
+
+        <section class="result-panel" id="result-panel" hidden tabindex="-1" aria-live="polite">
+          <div class="result-head">
+            <div>
+              <p class="panel-label">你的 XXTI</p>
+              <h2><code id="result-code">----</code></h2>
+            </div>
+            <div class="result-clarity">
+              <span>结果清晰度</span>
+              <strong id="result-clarity">--</strong>
+            </div>
+          </div>
+          <p class="result-name" id="result-name"></p>
+          <p class="result-summary" id="result-summary"></p>
+          <div class="axis-score-list" id="axis-score-list"></div>
+          <div class="result-columns" id="result-columns"></div>
+          <div class="result-partner" id="result-partner"></div>
+          <div class="result-compare" id="result-compare" hidden></div>
+          <div class="actions">
+            <button class="button button-solid" type="button" id="share-result">分享结果</button>
+            <button class="button button-ghost" type="button" id="copy-link">复制结果链接</button>
+            <a class="button button-ghost" id="result-wiki-link" href="wiki.html">查看这个类型的图鉴</a>
+          </div>
+          <p class="result-note">清晰度是四条轴偏好强度的平均值：越低，说明你在更多轴上接近均衡，它不是准确率。这份结果不是心理诊断，也不是职业定论，而是一个可以拿来讨论的起点。</p>
+        </section>
+
+        <section class="history-panel" id="history-panel" hidden>
+          <div class="history-head">
+            <div>
+              <p class="panel-label">本机记录</p>
+              <h3>历史结果</h3>
+            </div>
+            <button class="button button-ghost button-small" type="button" id="clear-history">清空记录</button>
+          </div>
+          <ol class="history-list" id="history-list"></ol>
+          <p class="result-note">记录只保存在这台设备的浏览器里，不会上传。点任意一条可以重新打开那次结果。</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/core.js" defer></script>
+  <script src="js/dom.js" defer></script>
+  <script src="js/layout.js" defer></script>
+  <script src="js/motion.js" defer></script>
+  <script src="js/pages.js" defer></script>
+</body>
+</html>

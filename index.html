@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XXTI | 首页</title>
+  <meta name="description" content="XXTI：原创的 16 型人格图鉴，四条连续维度计分，24 题快速测试。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+  <main>
+    <section class="hero section">
+      <div class="hero-copy">
+        <p class="eyebrow">eXperience × eXecution Type Index</p>
+        <h1>XXTI</h1>
+        <p class="lead">一套原创的人格图鉴：保留 16 型好记、好聊的表达，底层却按四条连续维度计分。它不给你贴标签，只帮你看清自己最常用的默认策略。</p>
+        <div class="actions">
+          <a class="button button-solid" href="quiz.html">开始 24 题测试</a>
+          <a class="button button-ghost" href="wiki.html">浏览 16 型图鉴</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <p class="panel-label">四条主轴</p>
+        <div class="axis-preview" id="axis-preview"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Start here</p>
+        <h2>三个入口，各走各的</h2>
+        <p>想直接知道结论就去测试，想先逛逛就去图鉴，想知道它靠不靠谱就看方法。</p>
+      </div>
+      <div class="grid-3">
+        <article class="portal-card">
+          <p class="panel-label">Test</p>
+          <h3>24 题快速测试</h3>
+          <p>大约 5 分钟。作答自动保存，做完得到类型、四轴强度和互补搭档，还能和上次结果对比。</p>
+          <a class="text-link" href="quiz.html">去测试</a>
+        </article>
+        <article class="portal-card">
+          <p class="panel-label">Wiki</p>
+          <h3>16 型图鉴</h3>
+          <p>每种类型的优势、盲点、压力下的样子、适配环境和升级建议，一页看完。</p>
+          <a class="text-link" href="wiki.html">去图鉴</a>
+        </article>
+        <article class="portal-card">
+          <p class="panel-label">Method</p>
+          <h3>设计依据</h3>
+          <p>XXTI 借了什么、改了什么、怎么计分，以及为什么它不是诊断书。</p>
+          <a class="text-link" href="method.html">去方法页</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">16 Types</p>
+        <h2>先认识一下这 16 位</h2>
+        <p>点任意一个，直接跳到它的图鉴页。</p>
+      </div>
+      <div class="type-strip" id="type-strip"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Dimensions</p>
+        <h2>四维骨架</h2>
+        <p>每一维都没有好坏之分，只是你更常用的默认策略。</p>
+      </div>
+      <div class="grid-2 dimension-grid" id="dimension-grid"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Boundaries</p>
+        <h2>XXTI 的边界</h2>
+      </div>
+      <div class="grid-3">
+        <article class="story-card">
+          <h3>保留可读性</h3>
+          <p>四轴组合成 16 型，是因为这种表达极易记住，也极易拿来讨论。</p>
+        </article>
+        <article class="story-card">
+          <h3>降低绝对化</h3>
+          <p>结果用「方向 + 强度」表达，接近均衡的轴会明确标出来，不硬塞进某一边。</p>
+        </article>
+        <article class="story-card accent">
+          <h3>只做镜子，不做裁决</h3>
+          <p>它适合自我观察和团队讨论，不适合筛人、定性，也不能替代专业心理评估。</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/core.js" defer></script>
+  <script src="js/dom.js" defer></script>
+  <script src="js/layout.js" defer></script>
+  <script src="js/motion.js" defer></script>
+  <script src="js/pages.js" defer></script>
+</body>
+</html>

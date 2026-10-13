@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XXTI | 图鉴</title>
+  <meta name="description" content="XXTI 16 型图鉴：每种类型的优势、盲点、压力下表现、适配环境与升级建议。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="wiki">
+  <main>
+    <section class="page-hero section">
+      <div class="copy-stack">
+        <p class="eyebrow">Wiki</p>
+        <h1 class="page-title">16 型图鉴</h1>
+        <p class="lead">每种类型都不是夸奖，也不是判决。点任意卡片，查看它的优势、盲点、压力下的样子、适配环境和升级建议。</p>
+      </div>
+      <div class="note-card">
+        <div>
+          <p class="panel-label">怎么读代码</p>
+          <p><strong>Q/R</strong> 充能方式，<strong>G/M</strong> 认知取向，<strong>B/D</strong> 协作姿态，<strong>L/W</strong> 执行节律。四个字母全部取反，就是你的互补搭档。</p>
+        </div>
+        <div class="actions">
+          <a class="button button-solid" href="quiz.html">先做测试</a>
+          <a class="button button-ghost" href="method.html">看设计依据</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="atlas-layout">
+        <div class="atlas-grid" id="atlas-grid"></div>
+        <aside class="type-detail" id="type-detail" aria-live="polite"></aside>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/core.js" defer></script>
+  <script src="js/dom.js" defer></script>
+  <script src="js/layout.js" defer></script>
+  <script src="js/motion.js" defer></script>
+  <script src="js/pages.js" defer></script>
+</body>
+</html>
